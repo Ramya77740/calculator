@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <label for="name" id="n1">First Name:</label>
+        <input type="text" id="ip1"/><br><br>
+        <label for="name" id="n2"> Branch:</label>
+        <input type="text" id="ip2"/><br><br>
+        <label for="name" id="n3">Gender:</label>
+        <input type="text" id="ip3"/><br><br>
+        <label for="name" id="n4">College:</label>
+        <input type="text" id="ip4"/><br><br>
+        <input type="submit">
+    </form>
+    <div id="result"></div>
+    <script>
+         let form=document.getElementById("form")
+        form.addEventListener("submit",event=>{
+            event.preventDefault();
+            let ip1 = document.getElementById("ip1").value;
+            let ip2 = document.getElementById("ip2").value;
+            let ip3 = document.getElementById("ip3").value;
+            let ip4 = document.getElementById("ip4").value;
+            let idCard = document.getElementById('id-card')
+             // result.style.display = "block"; 
+                result.style.textAlign="center";
+            result.style.background="yellow";
+              result.style.border = "2px solid black";
+              result.style.borderRadius = "10px";
+                result.style.padding = "20px";
+           result.style.width = "250px";
+                  result.style.height = "400px";
+
+            result.innerHTML = `<img src="./images/ram1.jpeg" style="width: 100px; height: 130px; border-radius: 50%; margin-bottom: 10px;">
+             <h2>ID Card</h2>
+                <p>First Name: ${ip1}</p>
+                <p>Branch: ${ip2}</p>
+                <p>Gender: ${ip3}</p>
+                <p>college: ${ip4}</p>
+            `;
+           
+         })
+    
+    </script>
+</body>
+</html>
